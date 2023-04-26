@@ -1,0 +1,479 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "DryIoc.dll/4.7.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/DryIoc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DryIoc.dll": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.31": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
+        }
+      },
+      "Prism.Core/8.1.97": {
+        "type": "package",
+        "compile": {
+          "lib/net47/Prism.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.dll": {}
+        }
+      },
+      "Prism.DryIoc/8.1.97": {
+        "type": "package",
+        "dependencies": {
+          "DryIoc.dll": "4.7.7",
+          "Prism.Wpf": "8.1.97"
+        },
+        "compile": {
+          "lib/net47/Prism.DryIoc.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.DryIoc.Wpf.dll": {}
+        }
+      },
+      "Prism.Wpf/8.1.97": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.31",
+          "Prism.Core": "8.1.97"
+        },
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/Prism.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.Wpf.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win": {
+      "DryIoc.dll/4.7.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/DryIoc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DryIoc.dll": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.31": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
+        }
+      },
+      "Prism.Core/8.1.97": {
+        "type": "package",
+        "compile": {
+          "lib/net47/Prism.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.dll": {}
+        }
+      },
+      "Prism.DryIoc/8.1.97": {
+        "type": "package",
+        "dependencies": {
+          "DryIoc.dll": "4.7.7",
+          "Prism.Wpf": "8.1.97"
+        },
+        "compile": {
+          "lib/net47/Prism.DryIoc.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.DryIoc.Wpf.dll": {}
+        }
+      },
+      "Prism.Wpf/8.1.97": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.31",
+          "Prism.Core": "8.1.97"
+        },
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/Prism.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.Wpf.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x64": {
+      "DryIoc.dll/4.7.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/DryIoc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DryIoc.dll": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.31": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
+        }
+      },
+      "Prism.Core/8.1.97": {
+        "type": "package",
+        "compile": {
+          "lib/net47/Prism.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.dll": {}
+        }
+      },
+      "Prism.DryIoc/8.1.97": {
+        "type": "package",
+        "dependencies": {
+          "DryIoc.dll": "4.7.7",
+          "Prism.Wpf": "8.1.97"
+        },
+        "compile": {
+          "lib/net47/Prism.DryIoc.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.DryIoc.Wpf.dll": {}
+        }
+      },
+      "Prism.Wpf/8.1.97": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.31",
+          "Prism.Core": "8.1.97"
+        },
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/Prism.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.Wpf.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "DryIoc.dll/4.7.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/DryIoc.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DryIoc.dll": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.31": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {}
+        }
+      },
+      "Prism.Core/8.1.97": {
+        "type": "package",
+        "compile": {
+          "lib/net47/Prism.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.dll": {}
+        }
+      },
+      "Prism.DryIoc/8.1.97": {
+        "type": "package",
+        "dependencies": {
+          "DryIoc.dll": "4.7.7",
+          "Prism.Wpf": "8.1.97"
+        },
+        "compile": {
+          "lib/net47/Prism.DryIoc.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.DryIoc.Wpf.dll": {}
+        }
+      },
+      "Prism.Wpf/8.1.97": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.31",
+          "Prism.Core": "8.1.97"
+        },
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/Prism.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net47/Prism.Wpf.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DryIoc.dll/4.7.7": {
+      "sha512": "GC2JdW0mN3wTcbcteP7LWwfU1eao0If/vMozCXSbcNZbHQD7kBjcKFO82g0OLssr7gGPWS4+vWpNZ1oOy54JKw==",
+      "type": "package",
+      "path": "dryioc.dll/4.7.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "DryIoc.snk",
+        "LICENSE.txt",
+        "dryioc.dll.4.7.7.nupkg.sha512",
+        "dryioc.dll.nuspec",
+        "icon.png",
+        "lib/net35/DryIoc.dll",
+        "lib/net35/DryIoc.xml",
+        "lib/net40/DryIoc.dll",
+        "lib/net40/DryIoc.xml",
+        "lib/net45/DryIoc.dll",
+        "lib/net45/DryIoc.xml",
+        "lib/netstandard1.0/DryIoc.dll",
+        "lib/netstandard1.0/DryIoc.xml",
+        "lib/netstandard1.3/DryIoc.dll",
+        "lib/netstandard1.3/DryIoc.xml",
+        "lib/netstandard2.0/DryIoc.dll",
+        "lib/netstandard2.0/DryIoc.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/DryIoc.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/DryIoc.xml",
+        "lib/portable-net45+win8+wp8+wpa81/DryIoc.dll",
+        "lib/portable-net45+win8+wp8+wpa81/DryIoc.xml",
+        "readme.txt"
+      ]
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.31": {
+      "sha512": "LZpuf82ACZWldmfMuv3CTUMDh3o0xo0uHUaybR5HgqVLDBJJ9RZLykplQ/bTJd0/VDt3EhD4iDgUgbdIUAM+Kg==",
+      "type": "package",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.31",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Design/Microsoft.Xaml.Behaviors.Design.dll",
+        "lib/net45/Microsoft.Xaml.Behaviors.dll",
+        "lib/net45/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net45/Microsoft.Xaml.Behaviors.xml",
+        "lib/net5.0-windows7.0/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.dll",
+        "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.xml",
+        "lib/netcoreapp3.1/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/netcoreapp3.1/Microsoft.Xaml.Behaviors.dll",
+        "lib/netcoreapp3.1/Microsoft.Xaml.Behaviors.pdb",
+        "lib/netcoreapp3.1/Microsoft.Xaml.Behaviors.xml",
+        "microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+        "microsoft.xaml.behaviors.wpf.nuspec",
+        "tools/Install.ps1"
+      ]
+    },
+    "Prism.Core/8.1.97": {
+      "sha512": "EP5zrvWddw3eSq25Y7hHnDYdmLZEC2Z/gMrvmHzUuLbitmA1UaS7wQUlSwNr9Km8lzJNCvytFnaGBEFukHgoHg==",
+      "type": "package",
+      "path": "prism.core/8.1.97",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net461/Prism.dll",
+        "lib/net461/Prism.pdb",
+        "lib/net461/Prism.xml",
+        "lib/net47/Prism.dll",
+        "lib/net47/Prism.pdb",
+        "lib/net47/Prism.xml",
+        "lib/net5.0/Prism.dll",
+        "lib/net5.0/Prism.pdb",
+        "lib/net5.0/Prism.xml",
+        "lib/netstandard2.0/Prism.dll",
+        "lib/netstandard2.0/Prism.pdb",
+        "lib/netstandard2.0/Prism.xml",
+        "prism-logo.png",
+        "prism.core.8.1.97.nupkg.sha512",
+        "prism.core.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Prism.DryIoc/8.1.97": {
+      "sha512": "8hdeAoZ+x1eBNIg+nMzox01uGUR4HnbCCR1iClNKwDfCWQ4ZtjEjsyeTXHcXKtG45xXqiERmJVew5tJmCdVPWw==",
+      "type": "package",
+      "path": "prism.dryioc/8.1.97",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net461/Prism.DryIoc.Wpf.dll",
+        "lib/net461/Prism.DryIoc.Wpf.pdb",
+        "lib/net461/Prism.DryIoc.Wpf.xml",
+        "lib/net47/Prism.DryIoc.Wpf.dll",
+        "lib/net47/Prism.DryIoc.Wpf.pdb",
+        "lib/net47/Prism.DryIoc.Wpf.xml",
+        "lib/net5.0-windows7.0/Prism.DryIoc.Wpf.dll",
+        "lib/net5.0-windows7.0/Prism.DryIoc.Wpf.pdb",
+        "lib/net5.0-windows7.0/Prism.DryIoc.Wpf.xml",
+        "lib/netcoreapp3.1/Prism.DryIoc.Wpf.dll",
+        "lib/netcoreapp3.1/Prism.DryIoc.Wpf.pdb",
+        "lib/netcoreapp3.1/Prism.DryIoc.Wpf.xml",
+        "prism-logo.png",
+        "prism.dryioc.8.1.97.nupkg.sha512",
+        "prism.dryioc.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Prism.Wpf/8.1.97": {
+      "sha512": "ZEa6S1mK35h8/blyb0uR0ed3wkpHtPdhB4eniXINJnTiJMWlGl/As6SVlFFdOPD+qsEdWNYV3xgyQD/ue5cvBA==",
+      "type": "package",
+      "path": "prism.wpf/8.1.97",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/net461/Prism.Wpf.dll",
+        "lib/net461/Prism.Wpf.pdb",
+        "lib/net461/Prism.Wpf.xml",
+        "lib/net47/Prism.Wpf.dll",
+        "lib/net47/Prism.Wpf.pdb",
+        "lib/net47/Prism.Wpf.xml",
+        "lib/net5.0-windows7.0/Prism.Wpf.dll",
+        "lib/net5.0-windows7.0/Prism.Wpf.pdb",
+        "lib/net5.0-windows7.0/Prism.Wpf.xml",
+        "lib/netcoreapp3.1/Prism.Wpf.dll",
+        "lib/netcoreapp3.1/Prism.Wpf.pdb",
+        "lib/netcoreapp3.1/Prism.Wpf.xml",
+        "prism-logo.png",
+        "prism.wpf.8.1.97.nupkg.sha512",
+        "prism.wpf.nuspec",
+        "readme.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "Prism.DryIoc >= 8.1.97",
+      "Prism.Wpf >= 8.1.97"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\Modules\\SettingsModule\\SettingsModule.csproj",
+      "projectName": "SettingsModule",
+      "projectPath": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\Modules\\SettingsModule\\SettingsModule.csproj",
+      "packagesPath": "C:\\Users\\Reshamtulla\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\Modules\\SettingsModule\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Reshamtulla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "dependencies": {
+          "Prism.DryIoc": {
+            "target": "Package",
+            "version": "[8.1.97, )"
+          },
+          "Prism.Wpf": {
+            "target": "Package",
+            "version": "[8.1.97, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

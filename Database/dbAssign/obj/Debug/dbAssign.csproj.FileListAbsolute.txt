@@ -1,0 +1,4 @@
+C:\Users\Reshamtulla\source\repos\AssignProject\Database\dbAssign\obj\Debug\dbAssign.Properties.Resources.resources
+C:\Users\Reshamtulla\source\repos\AssignProject\Database\dbAssign\obj\Debug\dbAssign.csproj.GenerateResource.cache
+C:\Users\Reshamtulla\source\repos\AssignProject\Database\dbAssign\obj\Debug\dbAssign.csproj.CoreCompileInputs.cache
+C:\Users\Reshamtulla\source\repos\AssignProject\Database\dbAssign\obj\Debug\dbAssign.csproj.AssemblyReference.cache

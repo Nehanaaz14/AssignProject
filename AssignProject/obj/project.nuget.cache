@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "iREibiJPceJD8KgHAVEfr/NPZiSrZ+IbHb3xtzZeonVaO7nVIxIHJ+EYlbB8JOtCxnIr+qTnPLZkYt4k7Ow8yw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\AssignProject\\AssignProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\commonservicelocator\\2.0.7\\commonservicelocator.2.0.7.nupkg.sha512",
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\dryioc.dll\\4.5.0\\dryioc.dll.4.5.0.nupkg.sha512",
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\prism.dryioc\\8.0.0.1909\\prism.dryioc.8.0.0.1909.nupkg.sha512",
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
+  ],
+  "logs": []
+}

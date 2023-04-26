@@ -1,0 +1,167 @@
+﻿<UserControl x:Class="AssignProject.Modules.Amplitude.Views.AmpPulRate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True" Height="480" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="110"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ContentControl Grid.Column="1" Width="220" Height="170" prism:RegionManager.RegionName="PulseWidthSetRegion" Grid.ColumnSpan="2" Margin="38.2,103,38.6,103" />
+        <ContentControl  Width="220" Height="170" prism:RegionManager.RegionName="AmplitudeSetRegion" Margin="38,103,38.8,103" />
+        <ContentControl Grid.Row="1" Grid.ColumnSpan="2" prism:RegionManager.RegionName="SettingsButtonSetRegion" Margin="0,0,-0.4,-0.8"/>
+        <!--<Grid Width="270" Height="170">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="54*" />
+                <ColumnDefinition Width="46*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2" Visibility="Hidden"/>
+            <Button
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch" 
+            Command="{Binding AmplitudeRampDialogCommand}" Margin="0,8,10.4,7.6">
+                <Grid
+                MinWidth="134">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition x:Name="Column" Width="40*" />
+                        <ColumnDefinition Width="60*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70*" />
+                        <RowDefinition Height="30*" />
+                    </Grid.RowDefinitions>
+                    <Grid
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    VerticalAlignment="Bottom">
+                        <TextBlock
+                        x:Name ="CurrentAmplitude"
+                        Margin="45,0,14.4,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Text="{Binding TotalCurrent}" />
+                        <TextBlock
+                        x:Name ="AmplitudeUnit"
+                        Margin="62,0,35.4,-16"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Text="mA" RenderTransformOrigin="2.75,-0.5" />
+                    </Grid>
+                    <Button x:Name="SetButton"
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Height="{Binding ActualWidth, ElementName=SetButton}"
+                    Margin="5,0,5,5"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Bottom"
+                    Command="{Binding AmplitudeRampDialogCommand}"
+                    Content="Set"/>
+                </Grid>
+            </Button>
+
+            <Button
+            x:Name="AmplitudeIncrementBtn"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="0,8,8,4"
+            Command="{Binding IncrementCurrent}"
+            Content="+"
+            FontSize="34"/>
+
+            <Button
+            x:Name="AmplitudeDecrementBtn"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,4,8,8"
+            Command="{Binding DecrementCurrent}"
+            Content="-"
+            FontSize="34"/>
+
+
+        </Grid>
+        <Grid Grid.Column="1">
+            <Button x:Name="pulsewidthBtn"
+                Width="65"
+                Height="50" Margin="68,15,67,104.6"
+                Command="{Binding PulseWidthDialogCommand}">
+                <Grid
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="3" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        AutomationProperties.AutomationId="Program_CurrentPulseWidth"
+                        Grid.Column="0"
+                        MaxWidth="35"
+                        Text="{Binding PulseWidthSelected}" />
+                    <TextBlock
+                        AutomationProperties.AutomationId="Program_PulseWidthUnit"
+                        Grid.Column="2"
+                        Height="Auto"
+                        Margin="0,0,0,3"
+                        VerticalAlignment="Bottom"
+                        Text="µs" />
+                </Grid>
+            </Button>
+            <Button x:Name="rateBtn"
+                Width="65"
+                Height="50" Margin="68,90,67,29.6"
+                Command="{Binding RateDialogCommand}">
+                <Grid
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="3" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        x:Name="DisplaySelectedRate"
+                        Grid.Column="0"
+                        MaxWidth="35"
+                        Text="{Binding RateSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBlock
+                        x:Name="RateUnit"
+                        Grid.Column="1"
+                        Height="24"
+                        VerticalAlignment="Bottom"
+                        Text="Hz" Grid.ColumnSpan="2" Margin="3,-3,-0.2,3" />
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <Button x:Name="saveBtn"
+                Width="150"
+                Height="50"
+                Content="Save Settings" Margin="71,10,279,15.2"
+                IsEnabled="{Binding btnEnabled}"
+                Command="{Binding SaveCommand}"
+                >
+
+            </Button>
+            <Button x:Name="clearBtn"
+                Width="150"
+                Height="50"
+                Content="Clear Settings" Margin="284,10,66,15.2" 
+                Command="{Binding RevertCommand}">
+            </Button>
+        </Grid>-->
+    </Grid>
+</UserControl>

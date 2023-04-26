@@ -1,0 +1,126 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\AssignProject.Modules.Amplitude.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\AssignProject\\AssignProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\AssignProject\\AssignProject.csproj",
+        "projectName": "AssignProject",
+        "projectPath": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\AssignProject\\AssignProject.csproj",
+        "packagesPath": "C:\\Users\\Reshamtulla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\AssignProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Reshamtulla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Prism.DryIoc": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\AssignProject.Modules.Amplitude.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\AssignProject.Modules.Amplitude.csproj",
+        "projectName": "AssignProject.Modules.Amplitude",
+        "projectPath": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\AssignProject.Modules.Amplitude.csproj",
+        "packagesPath": "C:\\Users\\Reshamtulla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Reshamtulla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\AssignProject\\AssignProject.csproj": {
+                "projectPath": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\AssignProject\\AssignProject.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Prism.DryIoc": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            },
+            "Prism.Wpf": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

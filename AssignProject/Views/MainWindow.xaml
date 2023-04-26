@@ -1,0 +1,25 @@
+﻿<Window x:Class="AssignProject.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}" Height="550" Width="600" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="297*"/>
+            <ColumnDefinition Width="196*"/>
+            <ColumnDefinition Width="101*"/>
+        </Grid.ColumnDefinitions>
+        <!--<ContentControl Grid.Row="2" Grid.ColumnSpan="3" prism:RegionManager.RegionName="SettingsButtonSetRegion" Margin="0,0,-0.4,-0.8"/>
+        <ContentControl Grid.Row="1" Grid.Column="0" Width="220" Height="170" prism:RegionManager.RegionName="AmplitudeSetRegion" Margin="38,103,38.8,103" />
+        <ContentControl Grid.Row="1" Grid.Column="1" Width="220" Height="170" prism:RegionManager.RegionName="PulseWidthSetRegion" Grid.ColumnSpan="2" Margin="38.2,103,38.6,103" />-->
+        <ContentControl Grid.Row="0" prism:RegionManager.RegionName="HeaderRegion" Grid.ColumnSpan="3"/>
+        <ContentControl Width=" 600" Height="480" prism:RegionManager.RegionName="SettingsDisplayRegion" Grid.ColumnSpan="3" Margin="0,41,-6.4,0.6" Grid.RowSpan="3"/>
+    </Grid>
+</Window>

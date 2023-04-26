@@ -1,0 +1,152 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\AssignProject\\AssignProject.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\AssignProject\\AssignProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\AssignProject\\AssignProject.csproj",
+        "projectName": "AssignProject",
+        "projectPath": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\AssignProject\\AssignProject.csproj",
+        "packagesPath": "C:\\Users\\Reshamtulla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\AssignProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Reshamtulla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Common\\SharedResource\\SharedResource.csproj": {
+                "projectPath": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Common\\SharedResource\\SharedResource.csproj"
+              },
+              "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\AmplitudeModule.csproj": {
+                "projectPath": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\AmplitudeModule.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Prism.DryIoc": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Common\\SharedResource\\SharedResource.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Common\\SharedResource\\SharedResource.csproj",
+        "projectName": "SharedResource",
+        "projectPath": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Common\\SharedResource\\SharedResource.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\AmplitudeModule.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\AmplitudeModule.csproj",
+        "projectName": "AmplitudeModule",
+        "projectPath": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\AmplitudeModule.csproj",
+        "packagesPath": "C:\\Users\\Reshamtulla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Modules\\AssignProject.Modules.Amplitude\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Reshamtulla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Common\\SharedResource\\SharedResource.csproj": {
+                "projectPath": "C:\\Users\\Reshamtulla\\Documents\\AssignProject\\AssignProject\\Common\\SharedResource\\SharedResource.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "CommonServiceLocator": {
+              "target": "Package",
+              "version": "[2.0.7, )"
+            },
+            "Prism.DryIoc": {
+              "target": "Package",
+              "version": "[8.0.0.1909, )"
+            },
+            "Prism.Wpf": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

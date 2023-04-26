@@ -1,0 +1,13 @@
+﻿<Window x:Class="AssignProject.Views.StartUpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AssignProject.Views"
+        mc:Ignorable="d"
+         Height="350" Width="600" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <TextBlock FontSize="44" Text="Application Window" Margin="91,74,94.6,192.8" RenderTransformOrigin="0.409,1.8"/>
+        <Button x:Name="StartBtn" Content="Start" Width="130" Height="50" FontWeight="Bold" Click="StartBtn_Click" Margin="222,143,221.6,122.8" />
+    </Grid>
+</Window>

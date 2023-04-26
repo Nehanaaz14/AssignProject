@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "+Byq4I0sZuj+ROe7qNkSYbRNBGoR1KvdW4hOW9igqP4Nxc7b31wT77wcxfJFH7rtlfqiuXhCEi2oBSoStRNEyg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Reshamtulla\\source\\repos\\AssignProject\\Modules\\SettingsModule\\SettingsModule.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\dryioc.dll\\4.7.7\\dryioc.dll.4.7.7.nupkg.sha512",
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\prism.dryioc\\8.1.97\\prism.dryioc.8.1.97.nupkg.sha512",
+    "C:\\Users\\Reshamtulla\\.nuget\\packages\\prism.wpf\\8.1.97\\prism.wpf.8.1.97.nupkg.sha512"
+  ],
+  "logs": []
+}

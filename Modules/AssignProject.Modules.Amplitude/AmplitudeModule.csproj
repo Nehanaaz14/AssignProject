@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76E633D8-1347-43C5-AEE8-148F8C4CC9A0}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AssignProject.Modules.Amplitude</RootNamespace>
+    <AssemblyName>AssignProject.Modules.Amplitude</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AmplitudeModule.cs" />
+    <Compile Include="AssignDatabase.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssignDatabase.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\BatteryChargeColor.cs" />
+    <Compile Include="Converter\BatteryIconColor.cs" />
+    <Compile Include="Converter\BatteryPercentConverter.cs" />
+    <Compile Include="Converter\TimeConverter.cs" />
+    <Compile Include="Hamisphere.cs" />
+    <Compile Include="Models\AmplitudeList.cs" />
+    <Compile Include="Models\BatteryInfo.cs" />
+    <Compile Include="Models\HemisphereType.cs" />
+    <Compile Include="Models\LeadType.cs" />
+    <Compile Include="Models\PortType.cs" />
+    <Compile Include="Models\RampSpeedModel.cs" />
+    <Compile Include="ObservableAmplitudeList.cs" />
+    <Compile Include="ObservablePulseWidthList.cs" />
+    <Compile Include="ObservableRateList.cs" />
+    <Compile Include="ObservableSavedSettingsList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RampSpeedItem.cs" />
+    <Compile Include="ViewModels\AmpPulRateViewModel.cs" />
+    <Compile Include="ViewModels\ApplicationSettingsViewModel.cs" />
+    <Compile Include="ViewModels\ListBoxItemViewModel.cs" />
+    <Compile Include="ViewModels\MainHeaderViewModel.cs" />
+    <Compile Include="ViewModels\PulseWidthOptionViewModel.cs" />
+    <Compile Include="ViewModels\PulseWidthRateViewModel.cs" />
+    <Compile Include="ViewModels\RateSelectViewModel.cs" />
+    <Compile Include="ViewModels\RateSettingViewModel.cs" />
+    <Compile Include="ViewModels\SavedSettingsViewModel.cs" />
+    <Compile Include="ViewModels\SettingsButtonViewModel.cs" />
+    <Compile Include="ViewModels\UpDownAmplitudeViewModel.cs" />
+    <Compile Include="ViewModels\ViewAViewModel.cs" />
+    <Compile Include="Views\AmpPulRate.xaml.cs">
+      <DependentUpon>AmpPulRate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ApplicationSettings.xaml.cs">
+      <DependentUpon>ApplicationSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainHeader.xaml.cs">
+      <DependentUpon>MainHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PulseWidthOption.xaml.cs">
+      <DependentUpon>PulseWidthOption.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PulseWidthRate.xaml.cs">
+      <DependentUpon>PulseWidthRate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RateSelectView.xaml.cs">
+      <DependentUpon>RateSelectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RateSetting.xaml.cs">
+      <DependentUpon>RateSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SavedSettings.xaml.cs">
+      <DependentUpon>SavedSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsButton.xaml.cs">
+      <DependentUpon>SettingsButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpDownAmplitude.xaml.cs">
+      <DependentUpon>UpDownAmplitude.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewA.xaml.cs">
+      <DependentUpon>ViewA.xaml</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="AssignDatabase.dbml.layout">
+      <DependentUpon>AssignDatabase.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="AssignDatabase.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AssignDatabase.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="IconLabelStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AmpPulRate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ApplicationSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PulseWidthOption.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PulseWidthRate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RateSelectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RateSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SavedSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingsButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UpDownAmplitude.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewA.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator">
+      <Version>2.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.DryIoc">
+      <Version>8.0.0.1909</Version>
+    </PackageReference>
+    <PackageReference Include="Prism.Wpf">
+      <Version>8.1.97</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\SharedResource\SharedResource.csproj">
+      <Project>{9dbbcd82-e53f-46b7-939f-0cc432555774}</Project>
+      <Name>SharedResource</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

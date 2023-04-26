@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AssignDatabase" Class="AssignDatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-13E2GUH\SQLEXPRESS;Initial Catalog=AssignDatabase;Integrated Security=True" SettingsObjectName="AssignProject.Modules.Amplitude.Properties.Settings" SettingsPropertyName="AssignDatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AmplitudeTable" Member="AmplitudeTables">
+    <Type Name="AmplitudeTable">
+      <Column Name="AmplitudeValue" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PulseWidthTable" Member="PulseWidthTables">
+    <Type Name="PulseWidthTable">
+      <Column Name="PulseWidthValues" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RateTable" Member="RateTables">
+    <Type Name="RateTable">
+      <Column Name="RateValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SavedSettings" Member="SavedSettings">
+    <Type Name="SavedSetting">
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MinAmplitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Pulse Width]" Member="Pulse_Width" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SLeadType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SPortType" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="SHemisphere" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxAmplitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RampSpeed" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
