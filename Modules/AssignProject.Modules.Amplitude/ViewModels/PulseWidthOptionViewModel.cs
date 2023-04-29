@@ -14,7 +14,15 @@ namespace AssignProject.Modules.Amplitude.ViewModels
     {
         public string Title => "";
         public int? PulseWidthSelected { get; set; }
-        public int SelectedPulseWidthItemIndex { get; set; }
+
+        private int selectedPulseWidthItemIndex;
+        public int SelectedPulseWidthItemIndex { get=> selectedPulseWidthItemIndex; set 
+            {
+                selectedPulseWidthItemIndex = value;
+                RaisePropertyChanged(nameof(SelectedPulseWidthItemIndex));
+            } 
+        }
+
         public DelegateCommand AcceptButtonCommand { get; set; }
 
         public DelegateCommand CloseButtonCommand { get; set; }
@@ -49,12 +57,12 @@ namespace AssignProject.Modules.Amplitude.ViewModels
 
         public void OnDialogOpened(IDialogParameters parameters)
         {
-            //throw new NotImplementedException();
+            SelectedPulseWidthItemIndex = parameters.GetValue<int>("PulseIndex");
         }
 
         public void CloseDialog()
         {
-            PulseWidthSelected = 60;
+            PulseWidthSelected = pulsewidthList[4].PulseWidthValues.Value;
             this.RequestClose.Invoke(new DialogResult(ButtonResult.Cancel, new DialogParameters { { DialogNames.PulseSelected, PulseWidthSelected } }));
         }
     }

@@ -61,6 +61,8 @@ namespace AssignProject.Modules.Amplitude.ViewModels
             }
         }
 
+        public string rampSpeedString;
+
         private double currentAmplitude;
         public double CurrentAmplitude
         {
@@ -220,7 +222,7 @@ namespace AssignProject.Modules.Amplitude.ViewModels
             _eventAggregator = eventAggregator;
 
             //_eventAggregator.GetEvent<ApplyTargetAmplitude>().Subscribe(Applytarget);
-            _eventAggregator.GetEvent<ApplyRampSpeed>().Subscribe(ApplyRampspeed);
+            //_eventAggregator.GetEvent<ApplyRampSpeed>().Subscribe(ApplyRampspeed);
         }
 
         //private void Applytarget(double obj)
@@ -237,7 +239,7 @@ namespace AssignProject.Modules.Amplitude.ViewModels
         //    }
         //}
 
-        private void ApplyRampspeed(string obj)
+        private void SetRampspeed(string obj)
         {
             if(obj == "Slow (0.1 mA/sec)") 
             {
@@ -347,6 +349,14 @@ namespace AssignProject.Modules.Amplitude.ViewModels
         public void OnDialogOpened(IDialogParameters parameters)
         {
             SelectedAmplitudeItemIndex = parameters.GetValue<int>("targerAmpIndex");
+
+            rampSpeedString = parameters.GetValue<string>("rampSpeedString");
+
+            if(rampSpeedString !=null)
+            {
+                SetRampspeed(rampSpeedString);
+            }
+
             double currentAmplitude = parameters.GetValue<double>(DialogNames.CurrentAmplitudeParameter);
            // this.SelectedRampSpeed = this.defaultRampSpeed != null
            //                 ? this.RampSpeedItemList.FirstOrDefault(x => x.RampSpeedItemName == this.defaultRampSpeed.RampSpeedItemName)

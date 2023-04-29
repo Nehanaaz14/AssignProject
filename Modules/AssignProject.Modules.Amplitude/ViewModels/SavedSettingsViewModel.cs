@@ -21,19 +21,40 @@ namespace AssignProject.Modules.Amplitude.ViewModels
 
         public IEventAggregator _aggregator;
 
-        public double CurrentAmp { get; set; }
+        private double currentAmp;
+        public double CurrentAmp { 
+            get=> currentAmp;
+            set {
+                currentAmp = value;
+                RaisePropertyChanged(nameof(CurrentAmp));
+            }
+        }
 
-        public double TargetAmp { get; set; }
+        private double targetAmp;
+        public double TargetAmp { get=> targetAmp; set { targetAmp = value; RaisePropertyChanged("TargetAmp"); } }
 
-        public string rampSpeed { get; set; }
+        private string _rampSpeed;
+        public string rampSpeed { get=> _rampSpeed; set { _rampSpeed = value; RaisePropertyChanged("rampSpeed"); } }
 
-        public string Port { get; set; }
+        private string port;
+        public string Port { get=> port; set { port = value; RaisePropertyChanged("Port"); } }
 
-        public string hemisphere { get; set; }
+        private string _hemisphere;
+        public string hemisphere { get=> _hemisphere; set {
+                _hemisphere = value;
+                RaisePropertyChanged("hemisphere");
+            } }
 
-        public string Lead { get; set; }
+        private string lead;
+        public string Lead { get=>lead; set 
+            {
+                lead = value;
+                RaisePropertyChanged("Lead");
+            } }
 
         public bool viewenable { get; set; }
+
+        public bool settingsenable { get; set; }
 
         public ICommand CanCelCommand { get; set; }
 
@@ -41,8 +62,13 @@ namespace AssignProject.Modules.Amplitude.ViewModels
 
         private IRegionManager _regionmanager;
 
-        public int Rate { get; set; }
-        public int PulseWidth { get; set; }
+        private int rate;
+        public int Rate { get=>rate; set { rate = value; RaisePropertyChanged("Rate"); } }
+
+        private int pulseWidth;
+        public int PulseWidth { get=> pulseWidth; set { pulseWidth = value; RaisePropertyChanged("PulseWidth"); } }
+
+
          public SavedSettingsViewModel(IRegionManager regionManager, IEventAggregator aggregator)
         {
             this._regionmanager = regionManager;
@@ -50,12 +76,15 @@ namespace AssignProject.Modules.Amplitude.ViewModels
             this.CanCelCommand = new DelegateCommand(CancelHandler);
             this.ApplySettingCommand = new DelegateCommand(ApplySettingHandler);
             _aggregator = aggregator;
-            DisplaySettings();
+            TextPropertyChanged();
+           DisplaySettings();
         }
 
         private void ApplySettingHandler()
         {
             viewenable = true;
+            settingsenable = true;
+
             if (this._regionmanager.Regions[RegionNames.SettingsDisplayRegion].NavigationService.Journal.CurrentEntry.Uri.OriginalString
               == "SavedSettings")
             {
@@ -69,18 +98,21 @@ namespace AssignProject.Modules.Amplitude.ViewModels
                 _aggregator.GetEvent<ApplyPort>().Publish(Port);
                 _aggregator.GetEvent<ApplyHemisphere>().Publish(hemisphere);
                 _aggregator.GetEvent<EnableViewButtonEvent>().Publish(viewenable);
+                _aggregator.GetEvent<EnableSettingButtonEvent>().Publish(settingsenable);
             }
         }
 
         private void CancelHandler()
         {
             viewenable = true;
+            settingsenable = true;
             
             if (this._regionmanager.Regions[RegionNames.SettingsDisplayRegion].NavigationService.Journal.CurrentEntry.Uri.OriginalString
                == "SavedSettings")
             {
                 _regionmanager.Regions[RegionNames.SettingsDisplayRegion].NavigationService.RequestNavigate(nameof(AmpPulRate));
                 _aggregator.GetEvent<EnableViewButtonEvent>().Publish(viewenable);
+                _aggregator.GetEvent<EnableSettingButtonEvent>().Publish(settingsenable);
 
             }
            
@@ -96,6 +128,8 @@ namespace AssignProject.Modules.Amplitude.ViewModels
                 if(AssignDatabaseData.SavedSettings.Count() == 0)
                 {
                     MessageBox.Show("No Records in Database", "Empty Database!", MessageBoxButton.OK);
+
+                    TextPropertyChanged();
                 }
                 else
                 {
@@ -119,11 +153,24 @@ namespace AssignProject.Modules.Amplitude.ViewModels
                     Lead = lastelement.Lead;
                     Port = lastelement.Port;
                     hemisphere = lastelement.hemisphere;
-                    
+
+                    TextPropertyChanged();
+
                 }
             }
         }
 
+        private void TextPropertyChanged()
+        {
+            RaisePropertyChanged(nameof(CurrentAmp));
+            RaisePropertyChanged(nameof(TargetAmp));
+            RaisePropertyChanged(nameof(rampSpeed));
+            RaisePropertyChanged(nameof(Rate));
+            RaisePropertyChanged(nameof(PulseWidth));
+            RaisePropertyChanged(nameof(Lead));
+            RaisePropertyChanged(nameof(Port));
+            RaisePropertyChanged(nameof(hemisphere));
+        }
         public void OnNavigatedTo(NavigationContext navigationContext)
         {
             

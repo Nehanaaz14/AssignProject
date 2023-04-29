@@ -20,6 +20,10 @@ namespace AssignProject.Modules.Amplitude.ViewModels
 
         public event Action<IDialogResult> RequestClose;
 
+        public int RateIndex;
+
+        public int PulseIndex;
+
         private bool _btnREnabled;
         public bool btnREnabled
         {
@@ -101,21 +105,41 @@ namespace AssignProject.Modules.Amplitude.ViewModels
         private void applypulse(int obj)
         {
             PulseWidthSelected = obj;
+            var ind = pulsewidthList.Where(x => x.PulseWidthValues == obj).FirstOrDefault();
+            if (ind != null)
+            {
+                PulseIndex = pulsewidthList.IndexOf(ind);
+            }
+            else
+            {
+                PulseIndex = 4;
+            }
         }
 
         private void applyrate(int obj)
         {
             RateSelected = obj;
+            var ind = rateList.Where(x => x.RateValue == obj).FirstOrDefault();
+            if (ind != null)
+            {
+                RateIndex = rateList.IndexOf(ind);
+            }
+            else
+            {
+                RateIndex = 30;
+            }
         }
 
         private void ResetPulseWidth(int pw)
         {
             PulseWidthSelected = pw;
+            PulseIndex = 0;
         }
 
         private void ResetRate(int obj)
         {
             RateSelected = obj;
+            RateIndex = 0;
         }
 
         private void ShowPulseWidthDialog()
@@ -129,7 +153,17 @@ namespace AssignProject.Modules.Amplitude.ViewModels
 
             this.RaisePropertyChanged(nameof(pulse));
 
-            var parameters = new DialogParameters { { DialogNames.PulseSelected, pulse} };
+            if (pulse == 60)
+            {
+                PulseIndex = 4;
+            }
+            else
+            {
+                var ind = pulsewidthList.FirstOrDefault(x => x.PulseWidthValues == pulse);
+                PulseIndex = pulsewidthList.IndexOf(ind);
+            }
+
+            var parameters = new DialogParameters { { DialogNames.PulseSelected, pulse},{ "PulseIndex",PulseIndex} };
 
             int pulseresult = 60;
 
@@ -150,11 +184,22 @@ namespace AssignProject.Modules.Amplitude.ViewModels
 
             var currentValue = this.RateSelected ?? 0;
 
+            if(currentValue == 130)
+            {
+                RateIndex = 30;
+            }
+            else
+            {
+                var ind = rateList.FirstOrDefault(x => x.RateValue == currentValue);
+                RateIndex = rateList.IndexOf(ind);
+            }
+
             this.RaisePropertyChanged(nameof(currentValue));
 
             var parameters = new DialogParameters {
                 {DialogNames.RateSelected, currentValue },
-                {DialogNames.RateSaveButtonEnable, btnREnabled }
+                {DialogNames.RateSaveButtonEnable, btnREnabled },
+                { "RateIndex",RateIndex}
             };
 
             int rateresult=130;

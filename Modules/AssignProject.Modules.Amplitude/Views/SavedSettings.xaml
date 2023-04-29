@@ -5,9 +5,16 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AssignProject.Modules.Amplitude.Views"
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:settingView="clr-namespace:AssignProject.Modules.Amplitude.Views"
+             xmlns:settingViewModel="clr-namespace:AssignProject.Modules.Amplitude.ViewModels"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
              Height="480" Width="600">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type settingViewModel:SavedSettingsViewModel}">
+            <settingView:SavedSettings/>
+        </DataTemplate>
+    </UserControl.Resources>
     <Grid Margin="10"
           Background="White">
         <Grid.RowDefinitions>
@@ -31,14 +38,14 @@
         <Label x:Name="leadTypeLabel" Content="Lead Type:" HorizontalAlignment="Left" Margin="14,25.8,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.728,0.552" Grid.Row="2" Grid.Column="2"/>
         <Label x:Name="portLabel" Content="Port:" HorizontalAlignment="Left" Margin="14,25.2,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.728,0.552" Grid.Row="3"/>
         <Label x:Name="hemisphereLabel" Content="Hemisphere:" HorizontalAlignment="Left" Margin="14,25.2,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.728,0.552" Grid.Row="3" Grid.Column="2"/>
-        <TextBlock x:Name="minAmptxtBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3.6,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="{Binding CurrentAmp}"/>
-        <TextBlock x:Name="maxAmptxtBlock" Grid.Column="3" HorizontalAlignment="Left" Margin="10.8,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="{Binding TargetAmp}"/>
-        <TextBlock x:Name="rampSpeedtxtBlock" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="3.6,33,0,0" TextWrapping="Wrap" Text="{Binding rampSpeed}" VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
-        <TextBlock x:Name="ratetxtBlock" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Margin="3.6,33,0,0" TextWrapping="Wrap"  Text="{Binding Rate}" VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
-        <TextBlock x:Name="porttxtBlock" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Margin="3.6,32.2,0,0" TextWrapping="Wrap" Text="{Binding Port}" VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
-        <TextBlock x:Name="pulsewidthtxtBlock" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left" Margin="10.8,33.4,0,0" TextWrapping="Wrap" Text="{Binding PulseWidth}"  VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
-        <TextBlock x:Name="leadtypetxtBlock" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" Margin="10.8,33.4,0,0" TextWrapping="Wrap" Text="{Binding Lead}"  VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
-        <TextBlock x:Name="hemispheretxtBlock" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" Margin="10.8,33.4,0,0" TextWrapping="Wrap" Text="{Binding hemisphere}" VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
+        <TextBlock x:Name="minAmptxtBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3.6,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="{Binding CurrentAmp, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock x:Name="maxAmptxtBlock" Grid.Column="3" HorizontalAlignment="Left" Margin="10.8,33,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Text="{Binding TargetAmp, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBlock x:Name="rampSpeedtxtBlock" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="3.6,33,0,0" TextWrapping="Wrap" Text="{Binding rampSpeed, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
+        <TextBlock x:Name="ratetxtBlock" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Margin="3.6,33,0,0" TextWrapping="Wrap"  Text="{Binding Rate, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
+        <TextBlock x:Name="porttxtBlock" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Margin="3.6,32.2,0,0" TextWrapping="Wrap" Text="{Binding Port, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
+        <TextBlock x:Name="pulsewidthtxtBlock" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left" Margin="10.8,33.4,0,0" TextWrapping="Wrap" Text="{Binding PulseWidth, UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
+        <TextBlock x:Name="leadtypetxtBlock" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" Margin="10.8,33.4,0,0" TextWrapping="Wrap" Text="{Binding Lead, UpdateSourceTrigger=PropertyChanged}"  VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
+        <TextBlock x:Name="hemispheretxtBlock" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" Margin="10.8,33.4,0,0" TextWrapping="Wrap" Text="{Binding hemisphere, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" RenderTransformOrigin="0.454,4.55"/>
         <Button x:Name="ApplyBtn" Content="Apply" Grid.Column="1" HorizontalAlignment="Left" Margin="47.4,32.6,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Command="{Binding ApplySettingCommand}" />
         <Button x:Name="CancelBtn" Content="Cancel" Command="{Binding CanCelCommand}" Width="75" Margin="15.6,32.6,54.2,146" Grid.Row="4" Grid.Column="2"/>
     </Grid>

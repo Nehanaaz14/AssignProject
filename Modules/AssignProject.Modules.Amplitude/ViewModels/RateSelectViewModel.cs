@@ -17,7 +17,13 @@ namespace AssignProject.Modules.Amplitude.ViewModels
         private static AssignDatabaseDataContext _adpDC = new AssignDatabaseDataContext();
         private readonly ObservableRateList rateList;
 
-        public int SelectedRateItemIndex { get; set; }
+        private int selectedRateItemIndex;
+        public int SelectedRateItemIndex { get=> selectedRateItemIndex; set
+            {
+                selectedRateItemIndex = value;
+                RaisePropertyChanged("SelectedRateItemIndex");
+            }
+        }
 
         public bool btnREnabled { get; set; }
 
@@ -64,10 +70,11 @@ namespace AssignProject.Modules.Amplitude.ViewModels
 
         public void OnDialogOpened(IDialogParameters parameters)
         {
+            SelectedRateItemIndex = parameters.GetValue<int>("RateIndex");
             this.RateSelected = parameters.GetValue<int>(DialogNames.RateSelected);
             btnREnabled = parameters.GetValue<bool>(DialogNames.RateSaveButtonEnable);
             this.RaisePropertyChanged(nameof(RateSelected));
-            RateSelected = this.rateList[SelectedRateItemIndex].RateValue.Value;
+            //RateSelected = this.rateList[SelectedRateItemIndex].RateValue.Value;
             //this.AcceptRateResult();
         }
         private void AcceptRateResult()

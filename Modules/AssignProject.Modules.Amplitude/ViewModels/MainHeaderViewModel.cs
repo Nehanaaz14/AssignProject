@@ -24,7 +24,7 @@ namespace AssignProject.Modules.Amplitude.ViewModels
             set
             {
                 enableViewCommamnd = value;
-                RaisePropertyChanged(nameof(enableViewCommamnd));
+                RaisePropertyChanged(nameof(EnableViewCommamnd));
             }
         }
 
@@ -36,7 +36,7 @@ namespace AssignProject.Modules.Amplitude.ViewModels
             set
             {
                 enableSettingsCommamnd = value;
-                RaisePropertyChanged(nameof(enableViewCommamnd));
+                RaisePropertyChanged(nameof(EnableSettingsCommamnd));
             }
         }
 
@@ -79,6 +79,7 @@ namespace AssignProject.Modules.Amplitude.ViewModels
             _aggregator.GetEvent<EnableViewButtonEvent>().Subscribe(Viewenable);
             _aggregator.GetEvent<EnableViewButton>().Subscribe(Viewenable);
             _aggregator.GetEvent<EnableSettingButtonEvent>().Subscribe(Settingenable);
+
         }
 
         private void Settingenable(bool obj)

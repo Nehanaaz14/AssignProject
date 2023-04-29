@@ -43,6 +43,8 @@ namespace AssignProject.Modules.Amplitude.ViewModels
         public int currentchange { get; set; }
 
         private string rampSpeedItem;
+
+        private string rampSpeedString;
         //private DispatcherTimer rampUpTimer;
 
         //private Dispatcher Dispatcher { get; }
@@ -79,6 +81,12 @@ namespace AssignProject.Modules.Amplitude.ViewModels
             _eventAggregator.GetEvent<ResetAmplitudeValue>().Subscribe(ResetAmplitude);
             _eventAggregator.GetEvent<ApplyCurrentAmplitude>().Subscribe(AmpCurrent);
             _eventAggregator.GetEvent<ApplyTargetAmplitude>().Subscribe(Applytarget);
+            _eventAggregator.GetEvent<ApplyRampSpeed>().Subscribe(ApplyRampspeed);
+        }
+
+        private void ApplyRampspeed(string obj)
+        {
+            rampSpeedString = obj;
         }
 
         private void Applytarget(double obj)
@@ -114,7 +122,7 @@ namespace AssignProject.Modules.Amplitude.ViewModels
             string tempspeed = "";
             int size = 0;
 
-            var parameters = new DialogParameters { { DialogNames.CurrentAmplitudeParameter, currentAmp } ,{ "targerAmpIndex", AmpIndex } };
+            var parameters = new DialogParameters { { DialogNames.CurrentAmplitudeParameter, currentAmp } ,{ "targerAmpIndex", AmpIndex } ,{ "rampSpeedString", rampSpeedString } };
 
             this.dialogService.ShowDialog(DialogNames.AmplitudeRampDialog, parameters, am => {
                 am.Parameters.TryGetValue<double>(DialogNames.CurrentAmplitudeParameter, out current);
@@ -160,17 +168,22 @@ namespace AssignProject.Modules.Amplitude.ViewModels
         {
             for(double i = amp1; i <= ch; i++)
             {
-                Task.Delay(1000).ContinueWith(_ =>
+                if(stepInterval == 0)
                 {
-                    TotalCurrent = TotalCurrent + stepInterval;
-                    if ((amp2 - TotalCurrent) < stepInterval)
+                    TotalCurrent = amp2;
+                }
+                else
+                {
+                    Task.Delay(1000).ContinueWith(_ =>
                     {
-                        TotalCurrent = amp2;
-                        RaisePropertyChanged(nameof(TotalCurrent));
-                    }
-                });
-               
-                    
+                        TotalCurrent = TotalCurrent + stepInterval;
+                        if ((amp2 - TotalCurrent) < stepInterval)
+                        {
+                            TotalCurrent = amp2;
+                            RaisePropertyChanged(nameof(TotalCurrent));
+                        }
+                    });
+                }    
                     RaisePropertyChanged(nameof(TotalCurrent));
                 
             }
@@ -180,14 +193,22 @@ namespace AssignProject.Modules.Amplitude.ViewModels
         {
             for (double i = amp1; i <= ch; i++)
             {
-                Task.Delay(1000).ContinueWith(_ =>
-                {
-                    TotalCurrent = TotalCurrent - stepInterval;
-                });
-                if ((amp2-TotalCurrent) < stepInterval)
+                if(stepInterval == 0)
                 {
                     TotalCurrent = amp2;
                 }
+                else
+                {
+                    Task.Delay(1000).ContinueWith(_ =>
+                    {
+                        TotalCurrent = TotalCurrent - stepInterval;
+                    });
+                    if ((amp2 - TotalCurrent) < stepInterval)
+                    {
+                        TotalCurrent = amp2;
+                    }
+                }
+               
                 RaisePropertyChanged(nameof(TotalCurrent));
                 
             }
